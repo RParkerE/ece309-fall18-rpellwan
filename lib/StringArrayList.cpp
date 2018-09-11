@@ -13,7 +13,7 @@ public:
 	}
 	void push_back(string s)
 	{
-		int i;
+		unsigned int i;
 		for(i = 0; i < sizeof(arrList); i++)
 		{
 			if(arrList[i] ==  "")
@@ -29,7 +29,8 @@ public:
 	}
 	string get(int n)
 	{
-		if(n > 0 && n < sizeof(arrList))
+		unsigned int i = n;
+		if(i > 0 && i < sizeof(arrList))
 			return arrList[n];
 		else
 			return "";
@@ -39,7 +40,7 @@ public:
 		return sizeof(arrList);
 	}
 	string remove_front(){
-		int i;
+		unsigned int i;
 		string tmp;
 		tmp = arrList[0];
 		for(i = 0; i < sizeof(arrList - 1); i++)
