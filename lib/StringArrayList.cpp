@@ -11,13 +11,14 @@ public:
 	{
 		arrList = new string[size];
 	}
-	void push_back(string s)
+	bool push_back(string s)
 	{
 		unsigned int i;
 		for(i = 0; i < sizeof(arrList); i++)
 		{
 			if(arrList[i] ==  "")
 				arrList[i] = s;
+				return true;
 		}
 		string* tmpArrList = new string[sizeof(arrList) + 1];
 		tmpArrList = arrList;
@@ -26,6 +27,7 @@ public:
 		arrList = new string[sizeof(tmpArrList)];
 		arrList = tmpArrList;
 		delete[] tmpArrList;
+		return true;
 	}
 	string get(int n)
 	{
