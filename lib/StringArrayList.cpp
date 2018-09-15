@@ -5,51 +5,63 @@ using namespace std;
 
 class StringArrayList{
 private:
-	string* arrList;
+	string *arrList = NULL;
+	int firstIdx;
+	int lastIdx;
 public:
-	StringArrayList(int size=1)
-	{
+    StringArrayList(int size = 1) 
+	{ 
 		arrList = new string[size];
+		firstIdx = 0;
+		lastIdx = size - 1;
 	}
 	bool push_back(string s)
 	{
-		unsigned int i;
-		for(i = 0; i < sizeof(arrList); i++)
+		for(int i = 0; i <= lastIdx; i++)
 		{
-			if(arrList[i] ==  "")
+			if(arrList[i].empty())
+			{
 				arrList[i] = s;
 				return true;
+			}
 		}
-		string* tmpArrList = new string[sizeof(arrList) + 1];
-		tmpArrList = arrList;
-		tmpArrList[-1] = s;
-		delete[] arrList;
-		arrList = new string[sizeof(tmpArrList)];
-		arrList = tmpArrList;
-		delete[] tmpArrList;
+		lastIdx = lastIdx + 1;
+		int newSize = lastIdx + 1;
+		string *tmpList = new string[newSize];
+		tmpList[lastIdx] = s;
+		for(int n = 0; n <= lastIdx; n++)
+		{
+			if(tmpList[n].empty())
+			{
+				tmpList[n] = arrList[n];
+			}
+		}
+		arrList = new string[newSize];
+		arrList = tmpList;
 		return true;
 	}
 	string get(int n)
 	{
-		unsigned int i = n;
-		if(i > 0 && i < sizeof(arrList))
-			return arrList[n];
-		else
-			return "";
+		return arrList[n];
 	}
 	int length()
 	{
-		return sizeof(arrList);
+		return lastIdx + 1;
 	}
-	string remove_front(){
-		unsigned int i;
-		string tmp;
-		tmp = arrList[0];
-		for(i = 0; i < sizeof(arrList - 1); i++)
+	string remove_front()
+	{
+		string s;
+		string *tmpList = new string[lastIdx];
+		for(int i = 0; i <= lastIdx; i++)
 		{
-			arrList[i] = arrList[i + 1];
+			if(i == 0)
+				s = arrList[i];
+			else
+				tmpList[i-1] = arrList[i];
 		}
-		return tmp;
+		arrList = new string[lastIdx];
+		arrList = tmpList;
+		return s;
 	}
 	~StringArrayList()
 	{
