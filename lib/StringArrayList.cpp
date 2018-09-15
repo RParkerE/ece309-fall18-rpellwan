@@ -5,7 +5,7 @@ using namespace std;
 
 class StringArrayList{
 private:
-	string *arrList = NULL;
+	string *arrList;
 	int firstIdx;
 	int lastIdx;
 public:
