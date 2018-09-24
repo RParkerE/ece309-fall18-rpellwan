@@ -36,17 +36,16 @@ public:
 			tail = node;         
 		}
 	}  
-	Object remove_front(Object &a)
+	bool remove_front(Object &a)
 	{
 		if (!empty()) 
-		{
-			Object copy = head->getItem(); 
+		{ 
 			ListNode *tmp = head->getNext();
 			delete head; 
 			head = tmp;  
 			if (tmp==NULL) 
 				tail = NULL;
-			return copy;
+			return true;
 		}
 		return false; 
 	}   
