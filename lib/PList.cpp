@@ -4,7 +4,7 @@ class Object {
 
 };
 
-class String : public Object {
+class StringItem : public Object {
 public:
 	const char * str;
 	String(const char *as = "")
@@ -13,13 +13,13 @@ public:
   	}
 };
 
-class Integer : public Object {
+class IntegerItem : public Object {
 public:
 	int i;
 	Integer(int n = 0) : i(n) {}
 };
 
-class Double : public Object {
+class DoubleItem : public Object {
 public:
 	double i;
 	Double(double n = 0.0) : i(n) {}
