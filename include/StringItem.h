@@ -6,7 +6,7 @@
 class StringItem : public Object {
 public:
   const char * str;
-  String(const char *as = "")
+  StringItem(const char *as = "")
   {
     str = as;
   }
