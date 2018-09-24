@@ -7,7 +7,7 @@ class Object {
 class StringItem : public Object {
 public:
 	const char * str;
-	String(const char *as = "")
+	StringItem(const char *as = "")
 	{
   		str = as;
   	}
@@ -16,13 +16,13 @@ public:
 class IntegerItem : public Object {
 public:
 	int i;
-	Integer(int n = 0) : i(n) {}
+	IntegerItem(int n = 0) : i(n) {}
 };
 
 class DoubleItem : public Object {
 public:
 	double i;
-	Double(double n = 0.0) : i(n) {}
+	DoubleItem(double n = 0.0) : i(n) {}
 };
 
 class List {
