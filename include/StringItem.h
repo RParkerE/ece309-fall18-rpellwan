@@ -1,9 +1,9 @@
-#ifndef STRING_H
-#define STRING_H
+#ifndef STRINGITEM_H
+#define STRINGITEM_H
 
 #include "Object.h"
 
-class String : public Object {
+class StringItem : public Object {
 public:
   const char * str;
   String(const char *as = "")
@@ -12,4 +12,4 @@ public:
   }
 };
 
-#endif //STRING_H
+#endif //STRINGITEM_H
