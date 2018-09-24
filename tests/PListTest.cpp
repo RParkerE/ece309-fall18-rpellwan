@@ -7,9 +7,9 @@
 
 int main() {
 	List l = List();
-	Object *o1 = new Integer(5);
-	Object *o2 = new Double(7.0);
-	Object *o3 = new String("String123");
+	Object *o1 = new IntegerItem(5);
+	Object *o2 = new DoubleItem(7.0);
+	Object *o3 = new StringItem("String123");
 	l.push_back(*o1);
 	l.push_back(*o2);
 	l.push_back(*o3);
