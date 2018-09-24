@@ -36,7 +36,7 @@ public:
 			tail = node;         
 		}
 	}  
-	bool remove_front(Object &a)
+	Object remove_front(Object &a)
 	{
 		if (!empty()) 
 		{
@@ -46,7 +46,7 @@ public:
 			head = tmp;  
 			if (tmp==NULL) 
 				tail = NULL;
-			return true;
+			return copy;
 		}
 		return false; 
 	}   
