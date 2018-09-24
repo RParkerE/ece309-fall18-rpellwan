@@ -6,7 +6,7 @@
 class IntegerItem : public Object {
 public:
 	int i;
-	Integer(int n = 0) : i(n) {}
+	IntegerItem(int n = 0) : i(n) {}
 };
 
 #endif //INTEGERITEM_H
