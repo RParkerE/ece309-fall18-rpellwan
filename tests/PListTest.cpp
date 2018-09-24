@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "PList.h"
 #include "Object.h"
-#include "String.h"
-#include "Double.h"
-#include "Integer.h"
+#include "StringItem.h"
+#include "DoubleItem.h"
+#include "IntegerItem.h"
 
 int main() {
 	List l = List();
