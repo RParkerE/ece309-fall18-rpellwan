@@ -1,5 +1,5 @@
-#ifndef INTSETARRAY_H
-#define INTSETARRAY_H
+#ifndef INTEGERSETARRAY_H
+#define INTEGERSETARRAY_H
 
 #include <stdio.h>
 #include <iostream>
@@ -76,4 +76,4 @@ public:
 	}
 };
 
-#endif //INTSETARRAY_H
+#endif //INTEGERSETARRAY_H
