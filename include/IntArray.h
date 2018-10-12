@@ -1,6 +1,3 @@
-#ifndef INTARRAY_H
-#define INTARRAY_H
-
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
@@ -14,7 +11,7 @@ class IntArray
         int arrSize;
         int* array;
     public:
-	
+
 void IntArray::set(int index, int val) 
 {
 	array[index] = val;
@@ -150,11 +147,22 @@ IntArray IntArray::operator/(int x) const
 IntArray IntArray::operator<<(int count) const
 {
 	IntArray result(arrSize);
+	int c = count;
+	
+	while(c > 0)
+	{
+		result.array[count - c] = array[c];
+		c -= 1;
+	}
+	for(int i = count; i < arrSize; i++)
+		result.array[i] = array[i - count];
+	
+	return result;
 }
 
 IntArray::operator char*() const
 {
-	char* arrStr;
+	char* arrStr = new char[arrSize];
 	for(int i = 0; i < arrSize; i++)
 	{
 		if(array[i] > 0 && array[i] < 255)
