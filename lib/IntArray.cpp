@@ -4,6 +4,12 @@
 
 using namespace std;
 
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
 class IntArray 
 {
     private:
@@ -86,12 +92,12 @@ void IntArray::remove_front()
     
 }
 
-int& IntArray::operator[](int index)
+int& operator[](int index)
 {
 	return array[index];
 }
 
-IntArray* IntArray::operator+=(const IntArray &rhs)
+IntArray* operator+=(const IntArray &rhs)
 {	
     int i=0;
 	
@@ -101,7 +107,7 @@ IntArray* IntArray::operator+=(const IntArray &rhs)
 	return this;
 }
 
-IntArray IntArray::operator+(const IntArray &rhs) const
+IntArray operator+(const IntArray &rhs) const
 {
 	IntArray result(arrSize);
 	
@@ -113,7 +119,7 @@ IntArray IntArray::operator+(const IntArray &rhs) const
 	return result;
 }
 
-IntArray IntArray::operator-(const IntArray &rhs) const
+IntArray operator-(const IntArray &rhs) const
 {
 	IntArray result(arrSize);
 	
@@ -125,7 +131,7 @@ IntArray IntArray::operator-(const IntArray &rhs) const
 	return result;
 }
 
-IntArray IntArray::operator*(int x) const
+IntArray operator*(int x) const
 {
 	IntArray result(arrSize);
 	
@@ -137,7 +143,7 @@ IntArray IntArray::operator*(int x) const
 	return result;
 }
 
-IntArray IntArray::operator/(int x) const
+IntArray operator/(int x) const
 {
 	IntArray result(arrSize);
 	
@@ -149,7 +155,7 @@ IntArray IntArray::operator/(int x) const
 	return result;
 }
 
-IntArray IntArray::operator<<(int count) const
+IntArray operator<<(int count) const
 {
 	IntArray result(arrSize);
 	int c = count;
@@ -165,7 +171,7 @@ IntArray IntArray::operator<<(int count) const
 	return result;
 }
 
-IntArray::operator char*() const
+operator char*() const
 {
 	char* arrStr = new char[arrSize];
 	for(int i = 0; i < arrSize; i++)
@@ -179,7 +185,7 @@ IntArray::operator char*() const
 	return arrStr;
 }
 
-IntArray::operator int() const
+operator int() const
 {
 	int avg = 0;
 	for(int i = 0; i < arrSize; i++)
