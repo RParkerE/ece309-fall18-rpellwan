@@ -63,7 +63,7 @@ bool IntegerSetArray::search(int x) const
 void IntegerSetArray::remove(int x)
 {
 	int* newArr = new int[size];
-	int count = 0; int current = 0;
+	int count = 0;
 	for(int i = 0; i < size; i++)
 	{
 		if(array[i] == x)
