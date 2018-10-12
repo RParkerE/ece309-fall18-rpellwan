@@ -4,12 +4,6 @@
 
 using namespace std;
 
-#include <stdio.h>
-#include <iostream>
-#include <string.h>
-
-using namespace std;
-
 class IntArray 
 {
     private:
@@ -173,11 +167,22 @@ IntArray IntArray::operator/(int x) const
 IntArray IntArray::operator<<(int count) const
 {
 	IntArray result(arrSize);
+	int c = count;
+	
+	while(c > 0)
+	{
+		result.array[count - c] = array[c];
+		c -= 1;
+	}
+	for(int i = count; i < arrSize; i++)
+		result.array[i] = array[i - count];
+	
+	return result;
 }
 
 IntArray::operator char*() const
 {
-	char* arrStr;
+	char* arrStr = new char[arrSize];
 	for(int i = 0; i < arrSize; i++)
 	{
 		if(array[i] > 0 && array[i] < 255)
