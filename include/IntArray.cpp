@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <iostream>
-#include <string.h>
-
-using namespace std;
+#ifndef INTARRAY_H
+#define INTARRAY_H
 
 #include <stdio.h>
 #include <iostream>
@@ -17,27 +14,7 @@ class IntArray
         int arrSize;
         int* array;
     public:
-		IntArray(const char* str);
-		IntArray(int size=1, int val=0);
-		~IntArray();
-		int& operator[](int index);
-		IntArray* operator+=(const IntArray &rhs);
-		IntArray operator+(const IntArray &rhs) const;
-		IntArray operator-(const IntArray &rhs) const;
-		IntArray operator*(int x) const;
-		IntArray operator/(int x) const;
-		IntArray operator<<(int count) const;
-		operator char*() const;
-		operator int() const;
-		void set(int index, int val);
-        void push_back(int x);
-        int get(int n);
-        int getLength();
-        void remove_front();
-        void print();
-
-};
-
+	
 void IntArray::set(int index, int val) 
 {
 	array[index] = val;
@@ -230,3 +207,6 @@ IntArray::~IntArray()
 {
     delete[] array;
 }
+};
+
+#endif //INTARRAY_H
