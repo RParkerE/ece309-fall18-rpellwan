@@ -47,12 +47,10 @@ public:
 	}
 	bool search(int x) const
 	{
-		int pos;
 		for(int i = 0; i < size; i++)
 		{
 			if(array[i] == x)
 			{
-				pos = i;
 				return true;
 			}
 		}
