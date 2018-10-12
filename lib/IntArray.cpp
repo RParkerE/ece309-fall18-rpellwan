@@ -98,9 +98,6 @@ IntArray* IntArray::operator+=(const IntArray &rhs)
     for(i=0; i < arrSize && i < rhs.arrSize; i++)
 		array[i] = array[i] + rhs.array[i];
 	
-    for(i = 0; i < arrSize; i++)
-		array[i] = array[i];
-	
 	return this;
 }
 
@@ -112,9 +109,6 @@ IntArray IntArray::operator+(const IntArray &rhs) const
 	
     for(i=0; i < arrSize && i < rhs.arrSize; i++)
 		result.array[i] = array[i] + rhs.array[i];
-	
-    for(i = 0; i < arrSize; i++)
-		result.array[i] = array[i]; 
 	
 	return result;
 }
@@ -128,9 +122,6 @@ IntArray IntArray::operator-(const IntArray &rhs) const
     for(i=0; i < arrSize && i < rhs.arrSize; i++)
 		result.array[i] = array[i] - rhs.array[i];
 	
-    for(i = 0; i < arrSize; i++)
-		result.array[i] = array[i];
-	
 	return result;
 }
 
@@ -143,9 +134,6 @@ IntArray IntArray::operator*(int x) const
     for(i=0; i < arrSize; i++)
 		result.array[i] = array[i] * x;
 	
-	for(i = 0; i < arrSize; i++)
-		result.array[i] = array[i];
-	
 	return result;
 }
 
@@ -157,9 +145,6 @@ IntArray IntArray::operator/(int x) const
 	
     for(i=0; i < arrSize; i++)
 		result.array[i] = array[i] / x;
-	
-	for(i = 0; i < arrSize; i++)
-		result.array[i] = array[i];
 	
 	return result;
 }
