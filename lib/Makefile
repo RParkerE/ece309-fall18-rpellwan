@@ -1,6 +1,6 @@
 
 # add files you create here
-OBJ = example.o StringList.o StringArrayList.o PList.o IntegerSetArray.o IntArray.o
+OBJ = example.o StringList.o StringArrayList.o PList.o IntegerSetArray.o IntArray.o InfInt.o
 
 all: libece309.a
 
