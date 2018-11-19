@@ -1,4 +1,6 @@
-IntArray.cpp
+#include "IntArray.h"
+#include <stdio.h>
+
 IntArray IntArray::operator+(const IntArray &rhs) const {
   IntArray result(length); // make object to hold return value,
                            // make long enough to hold this object’s data
