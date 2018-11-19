@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdio.h>
-#include InfInt.h
+#include "InfInt.h"
 
 IntInf::IntInf(bool neg = false, bool pos = false, bool i = false, bool undef = true, int iNum = -1) {
   negInf = neg;
