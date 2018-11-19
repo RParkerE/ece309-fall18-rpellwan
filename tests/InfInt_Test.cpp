@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdio.h>
-#include InfInt.h
+#include "InfInt.h"
 
 int main() {
   IntInf x = IntInf();
