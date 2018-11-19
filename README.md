@@ -33,9 +33,10 @@
 - Fix use of private members
 
 ## Homework 10
-- Shortest Path:
+- Shortest Path
   - DList.cpp, DList.h
   - Graph.cpp, Graph.h
+    - Includes Dijsktra Algorithm
   - MinHeap.cpp, MinHeap.h
   - Queue.cpp, Queue.h
   - Stack.cpp, Stack.h
