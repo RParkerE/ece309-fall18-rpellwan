@@ -3,34 +3,25 @@
 
 #include <stdio.h>
 
+using Item = int;
 
 class List {
 private:
-
-// ListNode represents each
-// node of the list
+  // ListNode represents each
+  // node of the list
   class ListNode {
   public:
-    int item; // data in the list
+    Item item; // data in the list
     ListNode *next;
+
   public:
-    ListNode(int a, ListNode *n=NULL)
-    {
+    ListNode(Item a, ListNode *n = NULL) {
       item = a;
-      next=n; // automatically serves as a list tail
+      next = n; // automatically serves as a list tail
     }
-    ListNode* getNext()
-    {
-      return next;
-    }
-    void setNext(ListNode *n)
-    {
-      next = n;
-    }
-    int& getItem()
-    {
-      return item;
-    }
+    ListNode *getNext() { return next; }
+    void setNext(ListNode *n) { next = n; }
+    Item &getItem() { return item; }
   };
 
   // add head and tail pointer
@@ -38,34 +29,31 @@ private:
   ListNode *tail;
 
 public:
-
   class iterator {
   private:
     ListNode *node;
 
   public:
-    iterator(ListNode *n=NULL) { node = n; }
-    int &getItem() { return node->getItem(); }
+    iterator(ListNode *n = NULL) { node = n; }
+    Item &getItem() { return node->getItem(); }
     void increment() { node = node->next; }
-    bool end() {  return node==NULL; }
+    bool end() { return node == NULL; }
 
     friend class List;
   };
 
-
 public:
   List();
-  void append(int a);
-  bool remove(int &a);
+  List(const List &copy);
+
+  void append(Item a);
+  bool remove(Item &a);
   bool empty();
 
-  iterator begin()
-  {
-    return iterator(head);
-  }
+  iterator begin() { return iterator(head); }
 
   void removeAfter(iterator it); // pseudocode in zyBook 2.4
-  void insertAfter(iterator it, int item);
+  void insertAfter(iterator it, Item item);
 };
 
-#endif //LIST_H
+#endif // LIST_H
