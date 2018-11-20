@@ -16,7 +16,7 @@ private:
 	
 public:
 	
-	IntInf(bool, bool, bool, bool, int);
+	IntInf(bool neg = false, bool pos = false, bool i = false, bool undef = true, int iNum = -1);
 	IntInf& operator=(const IntInf &rhs);
 	IntInf operator+(const IntInf &rhs) const;
 	IntInf operator-(const IntInf &rhs) const;
