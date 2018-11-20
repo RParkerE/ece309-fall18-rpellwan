@@ -10,6 +10,14 @@ IntInf::IntInf() {
   val = -1;
 }
 
+IntInf(bool neg = false, bool pos = false, bool i = false, bool undef = true, int iNum = -1);
+  negInf = neg;
+  posInf = pos;
+  integer = i;
+  undefined = undef;
+  val = iNum;
+}
+
 IntInf& IntInf::operator=(const IntInf &rhs) {
 	if(&rhs == this) return *this;
 	if(rhs.integer) 
