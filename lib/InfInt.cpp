@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include "InfInt.h"
 
-IntInf::IntInf(neg = false, pos = false, i = false, undef = true, iNum = -1) {
-  negInf = neg;
-  posInf = pos;
-  integer = i;
-  undefined = undef;
-  val = iNum;
+IntInf::IntInf() {
+  negInf = false;
+  posInf = false;
+  integer = false;
+  undefined = true;
+  val = -1;
 }
 
 IntInf& IntInf::operator=(const IntInf &rhs) {
