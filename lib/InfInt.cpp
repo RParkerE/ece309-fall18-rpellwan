@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "InfInt.h"
 
-IntInf(neg = false, pos = false, i = false, undef = true, iNum = -1);
+IntInf(neg = false, pos = false, i = false, undef = true, iNum = -1) {
   negInf = neg;
   posInf = pos;
   integer = i;
