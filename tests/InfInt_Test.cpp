@@ -3,7 +3,7 @@
 #include "InfInt.h"
 
 int main() {
-  bool test;
+  bool test = false;
   IntInf x = IntInf();
   IntInf y = IntInf(false, true, false, false, -1);
   IntInf z = IntInf();
