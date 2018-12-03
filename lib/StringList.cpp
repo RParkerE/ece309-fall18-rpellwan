@@ -3,6 +3,8 @@
 
 using namespace std;
 
+namespace ece309 {
+
 class List {
 private:
 	class ListNode {
@@ -87,3 +89,5 @@ public:
 			remove_front(t);   
 	}
 };
+
+}

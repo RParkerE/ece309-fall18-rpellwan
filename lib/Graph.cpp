@@ -6,6 +6,8 @@
 #include <climits>
 #include <stdio.h>
 
+namespace ece309 {
+
 SparseGraph::SparseGraph(int n) : Graph(n) { nodes = new Node[numNodes]; }
 
 void SparseGraph::addEdge(int v1, int v2) {
@@ -94,4 +96,6 @@ node_helper *ShortestPath(Graph &g, int startV) {
         nodesH[toNode].pred = currentV;
       }
     }
+}
+
 }

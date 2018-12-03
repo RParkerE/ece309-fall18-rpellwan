@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+namespace ece309 {
+
 class Object {
 
 };
@@ -109,3 +111,5 @@ public:
 			remove_front(t);   
 	}
 };
+
+}

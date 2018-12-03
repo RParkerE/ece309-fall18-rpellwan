@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+namespace ece309 {
+
 int counter;
 int fails;
 
@@ -136,4 +138,6 @@ int main()
   printf("INSERTION FAILURES: %d\n", fails);
   
   return 0;
+}
+
 }

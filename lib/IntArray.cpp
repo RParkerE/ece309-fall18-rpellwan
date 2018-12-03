@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+namespace ece309 {
+
 IntArray IntArray::operator+(const IntArray &rhs) const {
   IntArray result(length); // make object to hold return value,
                            // make long enough to hold this object’s data
@@ -85,4 +87,6 @@ IntArray::operator int() const {
   for (int i = 0; i < length; i++)
     average += array[i];
   return average / length;
+}
+
 }

@@ -1,5 +1,7 @@
 #include "Stack.h"
 
+namespace ece309 {
+
 void Stack::push(Item item)
 {
   List::iterator it; // get a NULL iterator
@@ -24,4 +26,6 @@ Item& Stack::peek()
 bool Stack::empty()
 {
   return list.empty();
+}
+
 }

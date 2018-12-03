@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+namespace ece309 {
+
 // can only hold positive integers
 IntegerSetHT::IntegerSetHT(int htsize) : IntegerSet(htsize) {
   probeDistance = 10;
@@ -83,4 +85,6 @@ void IntegerSetHTChain::remove(int data) {
     prev = it;
     it.increment();
   }
+}
+
 }

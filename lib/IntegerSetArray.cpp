@@ -4,6 +4,8 @@
 
 using namespace std;
 
+namespace ece309 {
+
 class IntegerSet {
 protected:
    int size;
@@ -78,4 +80,6 @@ void IntegerSetArray::remove(int x)
 IntegerSetArray::~IntegerSetArray()
 {
 	delete[] array;
+}
+
 }

@@ -3,6 +3,8 @@
 
 using namespace std;
 
+namespace ece309 {
+
 class StringArrayList{
 private:
 	string *arrList;
@@ -68,3 +70,5 @@ public:
 		delete[] arrList;
 	}
 };
+
+}

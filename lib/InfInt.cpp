@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "InfInt.h"
 
+namespace ece309 {
+
 IntInf::IntInf(bool neg, bool pos, bool i, bool undef, int iNum) {
   negInf = neg;
   posInf = pos;
@@ -384,4 +386,6 @@ bool IntInf::operator<(int num) const {
 		if(this->val < num) return true;
 	}
 	return false;
+}
+
 }

@@ -1,6 +1,8 @@
 #include "MinHeap.h"
 #include <stdio.h>
 
+namespace ece309 {
+
 void MinHeap::heapify(int *heap, int i, int n)
 {
 	int j, temp;
@@ -66,4 +68,6 @@ int MinHeap::getVal(int index)
 		return heap[index];
 	else
 		return -1;
+}
+
 }
