@@ -7,6 +7,8 @@
 
 using namespace std;
 
+namespace ece309 {
+
 class IntegerSet {
 protected:
    int size;
@@ -73,5 +75,7 @@ public:
 		numItems -= count;
 	}
 };
+
+}
 
 #endif //INTEGERSETARRAY_H

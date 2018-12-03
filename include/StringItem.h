@@ -3,6 +3,8 @@
 
 #include "Object.h"
 
+namespace ece309 {
+
 class StringItem : public Object {
 public:
   const char * str;
@@ -11,5 +13,7 @@ public:
     str = as;
   }
 };
+
+}
 
 #endif //STRINGITEM_H

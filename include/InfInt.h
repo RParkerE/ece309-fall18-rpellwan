@@ -4,6 +4,8 @@
 #include <iostream>
 #include <stdio.h>
 
+namespace ece309 {
+
 class IntInf {
 	
 private:
@@ -34,5 +36,7 @@ public:
 	bool operator<(int) const;
 	bool operator>(int) const;
 };
+
+}
 
 #endif //INFINT_H

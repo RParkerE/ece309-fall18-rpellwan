@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 
+namespace ece309 {
+
 class MinHeap {
 private:
 int *heap;
@@ -18,5 +20,7 @@ bool add(int data);
 void remove(int data);
 int getVal(int index);
 };
+
+}
 
 #endif // MINHEAP_H

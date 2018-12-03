@@ -4,6 +4,8 @@
 #include "List.h"
 #include <tgmath.h>
 
+namespace ece309 {
+
 // IntegerSet abstract base class to demonstrate hash table concepts
 class IntegerSet {
 protected:
@@ -47,4 +49,7 @@ public:
    virtual bool search(int) const override;
    virtual void remove(int) override;
 };
+
+}
+
 #endif //SQUAREINTEGERSET_H

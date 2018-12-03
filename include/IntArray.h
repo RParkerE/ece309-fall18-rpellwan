@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+namespace ece309 {
+
 class IntArray {
 private:
   int *array;
@@ -63,3 +65,5 @@ public:
   operator char *() const;
   operator int() const;
 };
+
+}

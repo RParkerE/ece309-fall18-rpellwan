@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include "Object.h"
 
+namespace ece309 {
+
 class List {
 private:
 	class ListNode {
@@ -88,5 +90,7 @@ public:
 			remove_front(t);   
 	}
 };
+
+}
 
 #endif //PLIST_H

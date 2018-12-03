@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 
+namespace ece309 {
+
 using Item = int;
 
 class DList {
@@ -48,5 +50,7 @@ public:
 
   iterator begin() { return iterator(head); }
 };
+
+}
 
 #endif // DLIST_H

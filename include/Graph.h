@@ -3,6 +3,8 @@
 
 #include "List.h"
 
+namespace ece309 {
+
 class Graph {
 protected:
   int numNodes;
@@ -72,5 +74,7 @@ public:
     return weights[src * numNodes + dest];
   }
 };
+
+}
 
 #endif // GRAPH_H
