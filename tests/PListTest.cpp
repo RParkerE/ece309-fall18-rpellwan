@@ -5,6 +5,8 @@
 #include "DoubleItem.h"
 #include "IntegerItem.h"
 
+using namespace ece309;
+
 int main() {
 	List l = List();
 	Object *o1 = new IntegerItem(5);

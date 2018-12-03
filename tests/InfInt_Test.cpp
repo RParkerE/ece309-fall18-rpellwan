@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "InfInt.h"
 
+using namespace ece309;
+
 int main() {
   bool test = false;
   IntInf x = IntInf();

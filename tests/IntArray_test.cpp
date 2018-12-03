@@ -1,7 +1,8 @@
-
 #include "IntArray.h"
 #include <stdio.h>
 #include <string.h>
+
+using namespace ece309;
 
 int main() {
   int testPassCnt = 0;
